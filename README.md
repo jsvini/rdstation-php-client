@@ -1,7 +1,12 @@
 #Usage
 ```php
 require("RDStationAPI.class.php");
+
+// ASYNCHRONOUS REQUEST
 $rdAPI = new RDStationAPI("RD_PRIVATE_TOKEN", "RD_TOKEN");
+
+// SYNCHRONOUS REQUEST
+// $rdAPI = new RDStationAPI("RD_PRIVATE_TOKEN", "RD_TOKEN", false);
 
 //SEND NEW LEAD TO RD STATION
 $return1 = $rdAPI->sendNewLead("customer@customer.com", array(
